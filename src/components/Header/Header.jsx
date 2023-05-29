@@ -5,6 +5,8 @@ import logo from '../../assets/images/eco-logo.png';
 import { NavLink } from 'react-router-dom';
 import userIcon from '../../assets/images/user-icon.png';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const nav_links = [
     {
@@ -22,7 +24,29 @@ const nav_links = [
 ]
 
 const Header = () => {
-    return <header className="header">
+    const headerRef = useRef(null);
+    const menuRef = useRef(null);
+
+    const stickyHeaderFunc= ()=>{
+        window.addEventListener('scroll', ()=>{
+            if(document.body.scrollTop>80 || document.documentElement.scrollTop>80){
+                headerRef.current.classList.add('sticky_header')
+            }else{
+                headerRef.current.classList.remove('sticky_header')
+            }
+        })
+    }
+
+    useEffect(()=>{
+        stickyHeaderFunc()
+
+        return()=>window.removeEventListener('scroll', stickyHeaderFunc);
+    });
+
+    const menuToggle = ()=> menuRef.current.classList.toggle('active_menu')
+
+    return ( 
+    <header className="header" ref={headerRef}>
         <Container>
             <Row>
                 <div className="nav_wrapper">
@@ -32,7 +56,7 @@ const Header = () => {
                     <h1>Glamour Girls Fashion</h1>
                     </div>
                     </div>
-                    <div className="navigation">
+                    <div className="navigation" ref={menuRef} onClick={menuToggle}>
                         <ul className="menu">
                        {
                         nav_links.map((item, index)=>(
@@ -58,16 +82,17 @@ const Header = () => {
                         <span>
                             <motion.img whileTap={{scale:1.2}} className='userImg' src={userIcon} alt="" />
                         </span>
-                    </div>
                     <div className="mobile_menu">
-                        <span>
+                        <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>
                         </span>
+                    </div>
                     </div>
                 </div>
             </Row>
         </Container>
     </header>
+    );
 };
 
 export default Header;

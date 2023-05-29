@@ -1,32 +1,32 @@
-import productImg01 from "../images/product-1.png";
-import productImg02 from "../images/product-2.png";
+import productImg01 from "../images/product-1.jpg";
+import productImg02 from "../images/product-2.jpeg";
 import productImg03 from "../images/product-3.png";
 
 import productImg04 from "../images/product-4.png";
-import productImg05 from "../images/product-5.png";
-import productImg06 from "../images/product-6.png";
-import productImg007 from "../images/product-7.png";
+import productImg05 from "../images/product-5.jpg";
+import productImg06 from "../images/product-6.jpeg";
+import productImg007 from "../images/product-7.jpg";
 
-import productImg07 from "../images/product-8.png";
-import productImg08 from "../images/product-9.png";
-import productImg09 from "../images/product-10.png";
-import productImg10 from "../images/product-11.png";
+import productImg07 from "../images/product-8.jpg";
+import productImg08 from "../images/product-9.jpg";
+import productImg09 from "../images/product-10.jpg";
+import productImg10 from "../images/product-11.jpg";
 
-import productImg13 from "../images/phone-01.jpg";
-import productImg14 from "../images/phone-02.jpg";
-import productImg15 from "../images/phone-03.png";
-import productImg16 from "../images/phone-04.jpg";
-import productImg17 from "../images/phone-05.jpg";
-import productImg18 from "../images/phone-06.jpg";
+import productImg13 from "../images/product-12.jpeg";
+import productImg14 from "../images/product-13.jpg";
+import productImg15 from "../images/product-14.jpg";
+import productImg16 from "../images/product-15.jpg";
+import productImg17 from "../images/product-16.jpg";
+import productImg18 from "../images/product-17.jpg";
 
-import productImg19 from "../images/watch-01.jpg";
-import productImg20 from "../images/watch-02.jpg";
-import productImg21 from "../images/watch-03.jpg";
-import productImg22 from "../images/watch-04.jpg";
+import productImg19 from "../images/product-18.png";
+import productImg20 from "../images/product-19.webp";
+import productImg21 from "../images/product-20.webp";
+import productImg22 from "../images/product-8.jpg";
 
-import productImg23 from "../images/wireless-01.png";
+import productImg23 from "../images/product-4.png";
 
-import productImg25 from "../images/wireless-03.png";
+import productImg25 from "../images/product-3.png";
 
 const products = [
   {
