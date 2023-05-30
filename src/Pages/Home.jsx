@@ -30,11 +30,11 @@ const Home = () => {
         const filterdBestSalesProducts = products.filter
         (item=> item.allCategory === 'all')
         const filterdMobileProducts = products.filter
-        (item=> item.category === 'mobile')
+        (item=> item.allCategory === 'all')
         const filterdWireLessProducts = products.filter
-        (item=> item.category === 'wireless')
+        (item=> item.allCategory === 'all')
         const filterdPopularProducts = products.filter
-        (item=> item.category === 'watch')
+        (item=> item.allCategory === 'all')
         setTrendingProducts(filterdTrendingProducts);
         setBestSalesProducts(filterdBestSalesProducts);
         setWireLessProducts(filterdWireLessProducts);
