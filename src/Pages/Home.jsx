@@ -25,16 +25,16 @@ const Home = () => {
 
     useEffect(()=>{
         const filterdTrendingProducts = products.filter
-        (item=> item.category === 'beauty')
+        (item=> item.category === 'cream')
         setTrendingProducts(filterdTrendingProducts);
         const filterdBestSalesProducts = products.filter
-        (item=> item.allCategory === 'all')
+        (item=> item.category === 'oil')
         const filterdMobileProducts = products.filter
-        (item=> item.allCategory === 'all')
+        (item=> item.category === 'shampoo')
         const filterdWireLessProducts = products.filter
-        (item=> item.allCategory === 'all')
+        (item=> item.category === 'soap')
         const filterdPopularProducts = products.filter
-        (item=> item.allCategory === 'all')
+        (item=> item.category === 'capsule')
         setTrendingProducts(filterdTrendingProducts);
         setBestSalesProducts(filterdBestSalesProducts);
         setWireLessProducts(filterdWireLessProducts);

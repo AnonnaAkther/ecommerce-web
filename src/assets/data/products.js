@@ -35,7 +35,7 @@ const products = [
     id: "01",
     productName: "Face whitening cream",
     imgUrl: productImg01,
-    category: "beauty",
+    category: "cream",
     price: 1500,
     quantity: "Net set: 25g",
     description: "brightening and glowing skin in 15 day's",
@@ -52,7 +52,7 @@ const products = [
     id: "02",
     productName: "30% marine collagen cream",
     imgUrl: productImg02,
-    category: "beauty",
+    category: "cream",
     price: 1250,
     quantity: "50 ml",
     description:
@@ -70,7 +70,7 @@ const products = [
     id: "03",
     productName: "Mesta set",
     imgUrl: productImg03,
-    category: "beauty",
+    category: "cream",
     price: "1500",
     quantity:"1 pc soap and 1 pc cream",
     description:"5-10 year older mesta,til pigment dark spot are gone",
@@ -80,7 +80,6 @@ const products = [
         text: "",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -91,7 +90,7 @@ const products = [
     id: "04",
     productName: "Update Power laser cream with licorice extract Permanent whitening cream",
     imgUrl: productImg04,
-    category: "beauty",
+    category: "cream",
     price: "1500",
     quantity: "Wet 30 g",
     description: "This is a magical cream that brings about remarkable changes to your skin from the very first day of use.",
@@ -107,20 +106,19 @@ const products = [
 
   {
     id: "05",
-    productName: "Trichup Hair Oil",
+    productName: "paxmoly deep marine extra power collagen gel",
     imgUrl: productImg05,
-    allCategory: "all",
-    price: "100ml oil: 800 200ml oil: 1200",
-    quantity: "Small Size: 100 ml Big Size: 200ml",
+    category: "gel",
+    price: 770,
+    quantity: "Gel 120 ml",
     description:
-      "",
+      "body Whitening",
     reviews: [
       {
         rating: 4.6,
-        text: "Made in India",
+        text: "Made in Korea",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -131,7 +129,7 @@ const products = [
     id: "06",
     productName: "Legano hair tonic",
     imgUrl: productImg06,
-    allCategory: "all",
+    category: "oil",
     price: 800,
     quantity: "120 ml",
     description: "Best for Hairfall and hair growth",
@@ -141,7 +139,6 @@ const products = [
         text: "Made in Thailand",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -151,7 +148,7 @@ const products = [
     id: "07",
     productName: "Trichup hair oil",
     imgUrl: productImg07,
-    allCategory: "all",
+    category: "oil",
     price: 1200,
     quantity: "100ml small size 200ml big size",
     description: "",
@@ -161,7 +158,6 @@ const products = [
         text: "Made in India",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -172,7 +168,7 @@ const products = [
     id: "27",
     productName: "Secret tone up sunscreen",
     imgUrl: productImg007,
-    allCategory: "all",
+    category: "cream",
     price: 1000,
     quantity:
       "Wet 70 ml",
@@ -184,7 +180,6 @@ const products = [
         text: "Made in Korea",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -193,9 +188,9 @@ const products = [
 
   {
     id: "08",
-    productName: "𝟑𝐖 𝐂𝐥𝐢𝐧𝐢𝐜 𝐂𝐨𝐥𝐥𝐚𝐠𝐞𝐧 𝐀𝐧𝐝 𝐋𝐮𝐱𝐮𝐫𝐲 𝐆𝐨𝐥𝐝 𝐑𝐞𝐯𝐢𝐭𝐚𝐥𝐢𝐬𝐢𝐧𝐠 𝐂𝐨𝐦𝐟𝐨𝐫𝐭 𝐆𝐨𝐥𝐝 𝐄𝐬𝐬𝐞𝐧𝐜𝐞",
+    productName: "3W Clinic Collagen and Luxury Gold Revitalising Comfort Gold Essence",
     imgUrl: productImg08,
-    allCategory: "all",
+    category: "oil",
     price: 1000,
     quantity:
       "Wet 70ml",
@@ -207,7 +202,6 @@ const products = [
         text: "Made in Korea",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -218,7 +212,7 @@ const products = [
     id: "09",
     productName: "L'oreal Elvive Extraordinary Oil Coco shampoo",
     imgUrl: productImg09,
-    allCategory: "all",
+    category: "shampoo",
     price: 800,
     quantity: "400ml",
     description:
@@ -230,7 +224,6 @@ const products = [
         text: "Made in USA",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -240,7 +233,7 @@ const products = [
     id: "10",
     productName: "Nature secret carrot soap",
     imgUrl: productImg10,
-    allCategory: "all",
+    category: "soap",
     price: 1500,
     quantity: "Wet 350 g",
     description:
@@ -251,7 +244,6 @@ const products = [
         text: "Made in France",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -262,7 +254,7 @@ const products = [
     id: "11",
     productName: "Grazia - 💯% Natural Shampoo",
     imgUrl: productImg13,
-    allCategory: "all",
+    category: "shampoo",
     price: 799,
     quantity:
       "",
@@ -275,7 +267,6 @@ const products = [
         text: "There are no side effects. Both boys and girls can use it.",
       },
       {
-        rating: 4.9,
         text: "Made in Korea",
       },
     ],
@@ -285,7 +276,7 @@ const products = [
     id: "11",
     productName: "Update Power laser cream with licorice extract Permanent whitening cream ",
     imgUrl: productImg14,
-    allCategory: "all",
+    category: "cream",
     price: 1500,
     quantity:
       "Wet 30 g",
@@ -298,7 +289,6 @@ const products = [
         text: "Made in Taiwan",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -309,7 +299,7 @@ const products = [
     id: "12",
     productName: "Gluta Fruits",
     imgUrl: productImg15,
-    allCategory: "all",
+    category: "gel",
     price: 599,
     quantity: "1 bottle : 30 Soft Gel ",
     description:
@@ -321,7 +311,6 @@ const products = [
         text: "Made in",
       },
       {
-        rating: 4.9,
         text: "Brand: M&J",
       },
     ],
@@ -332,7 +321,7 @@ const products = [
     id: "13",
     productName: "Shiroi Glutathione",
     imgUrl: productImg16,
-    allCategory: "all",
+    category: "capsule",
     price: '',
     offerPrice: 3000,
     quantity:
@@ -346,7 +335,6 @@ const products = [
         text: "Made in",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -357,7 +345,7 @@ const products = [
     id: "14",
     productName: "Good health capsule",
     imgUrl: productImg17,
-    allCategory: "all",
+    category: "capsule",
     price: 899,
     quantity: "",
     description:"Good Health Capsule, when used for 1 month, can help increase body weight by 5-7 kilograms and enhance the overall attractiveness of the body.",
@@ -368,7 +356,6 @@ const products = [
         text: "Made in India",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -377,9 +364,9 @@ const products = [
 
   {
     id: "15",
-    productName: "𝟑𝐖 𝐂𝐥𝐢𝐧𝐢𝐜 𝐂𝐨𝐥𝐥𝐚𝐠𝐞𝐧 𝐀𝐧𝐝 𝐋𝐮𝐱𝐮𝐫𝐲 𝐆𝐨𝐥𝐝 𝐑𝐞𝐯𝐢𝐭𝐚𝐥𝐢𝐬𝐢𝐧𝐠 𝐂𝐨𝐦𝐟𝐨𝐫𝐭 𝐆𝐨𝐥𝐝 𝐄𝐬𝐬𝐞𝐧𝐜𝐞",
+    productName: "3W Clinic Collagen and Luxury Gold Revitalising Comfort Gold Essence",
     imgUrl: productImg18,
-    allCategory: "all",
+    category: "oil",
     price: 1000,
     quantity:
       "Wet 70ml",
@@ -392,7 +379,6 @@ const products = [
         text: "Made in Korea",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -403,7 +389,7 @@ const products = [
     id: "16",
     productName: "Collasta collagen juice",
     imgUrl: productImg19,
-    allCategory: "all",
+    category: "powder",
     price: 299,
     quantity:
       "",
@@ -415,7 +401,6 @@ const products = [
         text: "100% Original",
       },
       {
-        rating: 4.9,
         text: "Made in ",
       },
     ],
@@ -426,7 +411,7 @@ const products = [
     id: "17",
     productName: "🍂 L'oreal Elvive Extraordinary Oil Coco shampoo",
     imgUrl: productImg20,
-    allCategory: "all",
+    category: "shampoo",
     price: 800,
     quantity:
       "400ml",
@@ -439,7 +424,6 @@ const products = [
         text: "Made in USA",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -450,14 +434,13 @@ const products = [
     id: "18",
     productName: "Body phap spf 45+ body whitening cream",
     imgUrl: productImg21,
-    allCategory: "all",
+    category: "cream",
     price: 1500,
     quantity: "250g",
     description:
       "body whitening cream",
     reviews: [
       {
-        rating: 4.8,
         text: "Made in Vietnam",
       },
       {
@@ -472,7 +455,7 @@ const products = [
     id: "19",
     productName: "nutri glow soap",
     imgUrl: productImg22,
-    allCategory: "all",
+    category: "soap",
     price: 1500,
     offerPrice: 1350,
     quantity:
@@ -484,7 +467,6 @@ const products = [
         text: "Made in Thailand",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -495,19 +477,18 @@ const products = [
     id: "20",
     productName: "Real Thanaka facepack",
     imgUrl: productImg23,
-    allCategory: "all",
+    category: "cream",
     price: 800,
     quantity:
       "250g",
     description:
-      "",
+      "Body whitening cream",
     reviews: [
       {
         rating: 4.8,
         text: "Made in Thailand",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -518,7 +499,7 @@ const products = [
     id: "22",
     productName: "P-vita melasma cream",
     imgUrl: productImg25,
-    allCategory: "all",
+    category: "cream",
     price: 1250,
     offerPrice: 1000,
     quantity: "Wet 10 g",
@@ -530,7 +511,6 @@ const products = [
         text: "Made in Thailand",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -540,7 +520,7 @@ const products = [
     id: "22",
     productName: "Nature secret carrot soap",
     imgUrl: productImg26,
-    allCategory: "all",
+    category: "soap",
     price: 1500,
     quantity:
       "wet 350g",
@@ -552,7 +532,6 @@ const products = [
         text: "Made in France",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
@@ -562,7 +541,7 @@ const products = [
     id: "22",
     productName: "30% marine collagen cream",
     imgUrl: productImg27,
-    allCategory: "all",
+    category: "cream",
     price: 1250,
     quantity:
       "50ml",
@@ -574,7 +553,6 @@ const products = [
         text: "Made in Korea",
       },
       {
-        rating: 4.9,
         text: "",
       },
     ],
