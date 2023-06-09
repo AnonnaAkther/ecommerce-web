@@ -14,7 +14,6 @@ import counterImg from '../assets/images/counter-timer-img.png';
 import Clock from '../components/UI/Clock';
 
 const Home = () => {
-
     const [trendingProducts,setTrendingProducts] = useState([]);
     const [bestSalesProducts,setBestSalesProducts] = useState([]);
     const [mobileProducts,setMobileProducts] = useState([]);
@@ -71,7 +70,8 @@ const Home = () => {
                     <Col lg="12" className='text-center'>
                         <h2 className="section_title">Trending Products</h2>
                     </Col>
-                    <ProductsList data={trendingProducts}/>
+                     <ProductsList data={trendingProducts}/>
+                    
                 </Row>
             </Container>
         </section>
@@ -82,6 +82,7 @@ const Home = () => {
                         <h2 className="section_title">Best Sales</h2>
                     </Col>
                     <ProductsList data={bestSalesProducts}/>
+                   
                 </Row>
             </Container>
         </section>
@@ -110,8 +111,9 @@ const Home = () => {
                     <Col lg="12" className='text-center mb-5'>
                         <h2 className="section_title">New Arrivals</h2>
                     </Col>
-                    <ProductsList data={mobileProducts}/>
-                    <ProductsList data={wireLessProducts}/>
+                      
+                        <ProductsList data={mobileProducts}/>
+                        <ProductsList data={wireLessProducts}/>
                 </Row>
             </Container>
         </section>

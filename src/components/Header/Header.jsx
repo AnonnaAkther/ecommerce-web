@@ -26,10 +26,6 @@ const nav_links = [
         path:'cart',
         display:'Cart'
     },
-    {
-        path:'login',
-        display:'Login'
-    },
 ]
 
 const Header = () => {
@@ -73,7 +69,7 @@ const Header = () => {
     };
 
     const toggleProfileActions = ()=> profileActionRef.current.classList.toggle
-    ('show_profileActions')
+    ('profile_actions')
 
     return ( 
     <header className="header" ref={headerRef}>
@@ -109,9 +105,8 @@ const Header = () => {
                             <i className="ri-shopping-bag-line"></i>
                             <span id="badge">{totalQuantity}</span>
                         </span>
-                        {/* <div className='profile'>
-                            <motion.img whileTap={{scale:1.2}} 
-                            className='userImg' 
+                        <div className='profile'>
+                            <motion.img whileTap={{scale:1.2}}
                             src={currentUser ? currentUser.photoURL : userIcon} 
                             alt="" 
                             onClick={toggleProfileActions}
@@ -121,14 +116,15 @@ const Header = () => {
                            ref={profileActionRef}
                            onClick={toggleProfileActions}>
                             {
-                                currentUser ? (<span onClick={logout}>Logout</span>):( 
+                                currentUser ? (<span style={{cursor: 'pointer'}} onClick={logout}>Logout</span>):( 
                                 <div className='d-flex align-items-center justify-content-center flex-column'>
-                                    <Link style={{textDecoration: 'none'}} className='/signup'>Signup</Link>
-                                    <Link style={{textDecoration: 'none'}} className='/login'>Login</Link>
+                                    <Link style={{textDecoration: 'none'}} to='/signup'>Signup</Link>
+                                    <Link style={{textDecoration: 'none'}} to='/login'>Login</Link>
+                                    <Link style={{textDecoration: 'none'}} to='/dashboard'>DashBoard</Link>
                                 </div>)
                             }
                            </div>
-                        </div> */}
+                        </div>
                     <div className="mobile_menu">
                         <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>

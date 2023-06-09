@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Col, Container, Form, FormGroup, Row } from 'reactstrap';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
@@ -48,7 +49,7 @@ const Checkout = () => {
                                 <h6>Subtotal: <span>{totalAmount}</span></h6>
                                 <h6><span>Shipping: <br />free shipping</span><span>0</span></h6>
                                 <h4>Total Cost: <span>{totalAmount}</span></h4>
-                            <button className="buy_btn w-100 bg-white auth_btn">Place an Order</button>
+                            <Link to="/payment"><button className="buy_btn w-100 bg-white auth_btn">Place an Order</button></Link>
                             </div>
                         </Col>
                     </Row>

@@ -15,7 +15,7 @@ const Signup = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [file, setFile] = useState(null);
+    const [file, setFile] = useState(null);
     const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate();
@@ -28,17 +28,17 @@ const Signup = () => {
                 auth, email, password
             );
             const user = userCredential.user;
-            const storageRef = ref(storage,username)
-            const uploadTask = uploadBytesResumable(storageRef)
+            const storageRef = ref(storage,`images/${Date.now() + username}`)
+            const uploadTask = uploadBytesResumable(storageRef, file)
 
             uploadTask.on((error)=>{
                 toast.error(error.message)
-            },
-            ()=>{
-                getDownloadURL(uploadTask.snapshot.ref).then(async(downloadUrl)=>{
+            },()=>{
+                getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURl)=>{
                     // update user profile
                     await updateProfile(user,{
                         displayName: username,
+                        photoURL: downloadURl
                     });
 
                     // store user data in firestore database
@@ -46,9 +46,9 @@ const Signup = () => {
                         uid: user.uid,
                         displayName: username,
                         email,
+                        photoURL: downloadURl
                     })
-                }
-                );
+                });
             });
             setLoading(false);
             toast.success('Account created')
@@ -74,24 +74,24 @@ const Signup = () => {
                                   <input type="text" 
                                   placeholder='Username'
                                   value={username} 
-                                  onChange={e=> setUsername(e.target.value)}/>
+                                  onChange={(e)=> setUsername(e.target.value)}/>
                               </FormGroup>
                               <FormGroup className='form_group'>
                                   <input type="email" 
                                   placeholder='Enter Your Email'
                                   value={email} 
-                                  onChange={e=> setEmail(e.target.value)}/>
+                                  onChange={(e)=> setEmail(e.target.value)}/>
                               </FormGroup>
                               <FormGroup className='form_group'>
                                   <input type="password" 
                                   placeholder='Enter Your Password' 
                                   value={password} 
-                                  onChange={e=> setPassword(e.target.value)}/>
+                                  onChange={(e)=> setPassword(e.target.value)}/>
                               </FormGroup>
-                              {/* <FormGroup className='form_group'>
+                              <FormGroup className='form_group'>
                                   <input type="file" 
-                                  onChange={e=> setFile(e.target.value)}/>
-                              </FormGroup> */}
+                                  onChange={(e)=> setFile(e.target.files[0])}/>
+                              </FormGroup>
                               <button type='submit' className="buy_btn auth_btn">Create an Account</button>
                               <p style={{marginTop: '10px'}}>Already have an account? <Link style={{textDecoration: 'none', color: 'gray'}} to='/login'>Login</Link></p>
                           </Form>

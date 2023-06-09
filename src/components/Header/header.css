@@ -71,18 +71,18 @@
     font-weight: 600;
     z-index: 10;
 }
-.nav_icons .profile img{
+.profile img{
     width: 30px;
     height: 30px;
     cursor: pointer;
     border-radius: 50%;
 }
-.nav_icons .profile{
+.profile{
     position: relative;
     z-index: 9;
 }
-.nav_icons .profile .profile_actions{
-    position: absolute;
+.profile_actions{
+    position:fixed;
     top: 98%;
     left: 0;
     width: 150px;
@@ -91,14 +91,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-decoration: none;
+    column-gap: 2px;
     background-color: var(--card-bg-01);
-    line-height: 30px;
+    display: none;
     cursor: pointer;
-    display: block;
 }
 .show_profileActions{
-    display: none;
+    display: block;
 }
 .mobile_menu{
     font-size: 1.3rem;

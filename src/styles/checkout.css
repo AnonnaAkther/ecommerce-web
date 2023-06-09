@@ -7,6 +7,9 @@
     color: #fff;
     border-radius: 5px;
 }
+.checkout_cart a{
+    text-decoration: none;
+}
 .checkout_cart h6, h4{
     display: flex;
     align-items: center;
@@ -18,4 +21,12 @@
 .checkout_cart h4{
     border-top: 1px solid rgba(221, 221, 221, 0.253);
     padding-top: 20px;
+}
+#close-cart{
+    position: relative;
+    top: 1rem;
+    right: 0.8rem;
+    color: rgb(165, 235, 235);
+    font-size: 2rem;
+    cursor: pointer;
 }
