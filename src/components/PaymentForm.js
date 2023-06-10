@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import '../styles/paymentForm.css'
+import { toast } from 'react-toastify'
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -42,7 +43,7 @@ export default function PaymentForm() {
                 id
             })
             if(response.data.success){
-                console.log("Successfully Payment")
+                toast.success('Successfully Paid')
                 setSuccess(true)
             }
         } catch (error) {
@@ -50,11 +51,13 @@ export default function PaymentForm() {
         }
     }
     else{
+        toast.error('Your card number is incomplete! Try again')
         console.log(error.message)
     }
 }
   return (
     <>
+    
     {!success ?
     <form onSubmit={handleSubmit}>
         <fieldset className='FormGroup'>

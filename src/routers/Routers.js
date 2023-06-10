@@ -13,6 +13,7 @@ import AddProducts from '../admin/AddProducts';
 import Dashboard from '../admin/Dashboard';
 import Users from '../admin/Users';
 import StripeContainer from '../components/StripeContainer';
+import PaymentScreen from '../Pages/PaymentScreen';
 
 const Routers = () => {
     return <Routes>
@@ -24,13 +25,13 @@ const Routers = () => {
         <Route path='payment' element={<StripeContainer/>}/>
         <Route path='/*' element={<ProtectedRoute/>}>
             <Route path='checkout' element={<Checkout/>} />
-            <Route path='dashboard' element={<Dashboard/>} />
-            <Route path='dashboard/all-products' element={<AllProducts/>} />
+            {/* <Route path='payment-screen' element={<PaymentScreen/>} /> */}
+            {/* <Route path='dashboard/all-products' element={<AllProducts/>} />
             <Route path='dashboard/add-product' element={<AddProducts/>} />
-            <Route path='dashboard/users' element={<Users/>} />
+            <Route path='dashboard/users' element={<Users/>} /> */}
         </Route>
-        <Route path="login" element={<Login/>}/>
-        <Route path="signup" element={<Signup/>}/>
+        {/* <Route path="login" element={<Login/>}/>
+        <Route path="signup" element={<Signup/>}/> */}
     </Routes>
 };
 

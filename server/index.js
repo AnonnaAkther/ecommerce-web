@@ -4,6 +4,7 @@ require('dotenv').config()
 const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const { toast } = require('react-toastify')
 
 app.use(bodyParser.urlencoded)({extended: true})
 app.use(bodyParser.json())
@@ -19,12 +20,13 @@ app.post('/payment', cors(), async(req, res)=>{
             payment_method: id,
             confirm: true
         })
-        console.log("payment")
+        console.log(payment)
         res.json({
             message: "Payment Successfull",
             success: true
         })
     } catch (error) {
+        toast.error('Your Card number is invalid')
         console.log("Error", error);
         res.json({
             message: "Payment Failed",

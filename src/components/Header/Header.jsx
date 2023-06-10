@@ -107,7 +107,7 @@ const Header = () => {
                         </span>
                         <div className='profile'>
                             <motion.img whileTap={{scale:1.2}}
-                            src={currentUser ? currentUser.photoURL : userIcon} 
+                            src={userIcon} 
                             alt="" 
                             onClick={toggleProfileActions}
                             />
@@ -118,9 +118,9 @@ const Header = () => {
                             {
                                 currentUser ? (<span style={{cursor: 'pointer'}} onClick={logout}>Logout</span>):( 
                                 <div className='d-flex align-items-center justify-content-center flex-column'>
-                                    <Link style={{textDecoration: 'none'}} to='/signup'>Signup</Link>
-                                    <Link style={{textDecoration: 'none'}} to='/login'>Login</Link>
-                                    <Link style={{textDecoration: 'none'}} to='/dashboard'>DashBoard</Link>
+                                    <Link style={{textDecoration: 'none', gap: '2px'}} to='/signup'>Signup</Link>
+                                    <Link style={{textDecoration: 'none', gap: '2px'}} to='/login'>Login</Link>
+                                    <Link style={{textDecoration: 'none', gap: '2px'}} to='/dashboard'>DashBoard</Link>
                                 </div>)
                             }
                            </div>

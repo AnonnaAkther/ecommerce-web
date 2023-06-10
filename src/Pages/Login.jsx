@@ -26,7 +26,7 @@ const Login = () => {
             console.log(user);
             setLoading(false)
             toast.success('Successfully Logged in')
-            navigate('/checkout')
+            navigate('/dashboard')
         }
         catch(error){
             setLoading(false)

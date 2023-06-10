@@ -73,11 +73,11 @@ const Shop = () => {
                     </Col>
                     <Col lg='3' md='6' className='text-end'>
                     <div className="filter_widget">
-                            <select>
+                            {/* <select>
                                 <option>Sort By</option>
                                 <option value="ascending">Ascending</option>
                                 <option value="decending">Decending</option>
-                            </select>
+                            </select> */}
                         </div>
                     </Col>
                     <Col lg='6' md='6'>

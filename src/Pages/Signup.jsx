@@ -14,6 +14,7 @@ const Signup = () => {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
     const [password, setPassword] = useState('');
     const [file, setFile] = useState(null);
     const [loading, setLoading] = useState(false)
@@ -28,6 +29,7 @@ const Signup = () => {
                 auth, email, password
             );
             const user = userCredential.user;
+            console.log(user)
             const storageRef = ref(storage,`images/${Date.now() + username}`)
             const uploadTask = uploadBytesResumable(storageRef, file)
 
@@ -46,6 +48,7 @@ const Signup = () => {
                         uid: user.uid,
                         displayName: username,
                         email,
+                        address,
                         photoURL: downloadURl
                     })
                 });
@@ -88,6 +91,13 @@ const Signup = () => {
                                   value={password} 
                                   onChange={(e)=> setPassword(e.target.value)}/>
                               </FormGroup>
+                              <FormGroup className="form_group">
+                                    <input type="text" placeholder='Street Address' 
+                                    value={address}
+                                    required
+                                    onChange={(e)=>setAddress(e.target.value)}
+                                    />
+                                </FormGroup>
                               <FormGroup className='form_group'>
                                   <input type="file" 
                                   onChange={(e)=> setFile(e.target.files[0])}/>

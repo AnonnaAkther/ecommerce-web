@@ -13,16 +13,16 @@ const Dashboard = () => {
        <section>
         <Container>
             <Row>
-                <Col className='lg-3'>
+                {/* <Col className='lg-3'>
                     <div className="revenue_box">
                         <h5>Total Sales</h5>
                         <span>5678</span>
                     </div>
-                </Col>
+                </Col> */}
                 <Col className='lg-3'>
                     <div className="order_box">
                         <h5>Orders</h5>
-                        <span>569</span>
+                        <span>{products.length}</span>
                     </div>
                 </Col>
                 <Col className='lg-3'>

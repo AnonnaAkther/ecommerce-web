@@ -20,23 +20,37 @@ const Footer = () => {
                 <p className="footer_text mt-4">
                     Glamour Girls Fashion is by your side as a symbol of beauty
                     .You can get Permanent Skin Care solution
-                    </p>
+                </p>
+                <div className='d-flex'>
+                    <div>
+                        <Link style={{textDecoration: 'none', marginLeft: '5px'}} 
+                        to="https://www.facebook.com/glamourgirlsfashion1?mibextid=LQQJ4d">
+                        <i class="ri-facebook-circle-fill"></i>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link style={{textDecoration: 'none', marginLeft: '5px'}} 
+                        to="https://www.tiktok.com/@glamourgirlsfashion?_t=8ca1HmX2DT7&_r=1">
+                        <i class="ri-tiktok-fill"></i>
+                        </Link>
+                    </div>
+                </div>
                 </Col>
                 <Col lg='3' md='3' className='mb-4'>
                     <div className="footer_quick-links">
                         <h4 className="quick_links_title">Top Categories</h4>
                         <ListGroup>
                             <ListGroupItem className='ps-0 border-0'>
-                                <Link to="#">Mobile Phones</Link>
+                                <Link to="#">Cream</Link>
                             </ListGroupItem>
                             <ListGroupItem className='ps-0 border-0'>
-                                <Link to="#">Mobile Phones</Link>
+                                <Link to="#">Oil</Link>
                             </ListGroupItem>
                             <ListGroupItem className='ps-0 border-0'>
-                                <Link to="#">Mobile Phones</Link>
+                                <Link to="#">Capsule</Link>
                             </ListGroupItem>
                             <ListGroupItem className='ps-0 border-0'>
-                                <Link to="#">Smart Watches</Link>
+                                <Link to="#">Shampoo</Link>
                             </ListGroupItem>
                         </ListGroup>
                     </div>
