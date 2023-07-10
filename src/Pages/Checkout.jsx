@@ -1,23 +1,35 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
+import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import { Col, Container, Form, FormGroup, Row } from 'reactstrap';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
 import '../styles/checkout.css'
+import { toast } from 'react-toastify';
 
 const Checkout = () => {
     const totalQty = useSelector(state=> state.cart.totalQuantity)
     const totalAmount = useSelector(state=> state.cart.totalAmount)
 
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [address, setAddress] = useState('');
-    const [city, setCity] = useState('');
-    const [postalCode, setPostalCode] = useState('');
-    const [country, setCountry] = useState('');
+ 
+        const form = useRef();
+      
+        const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm(
+            'service_1mv0ret', 
+            'template_9sr3ajb', 
+            form.current, 
+            'SXiW8hnHg99IjcZI1')
+            .then((result) => {
+                toast.success('Message Sent Successfully')
+            }, (error) => {
+                toast.error('Something Went Wrong')
+            });
+        };
+      
 
     return (
         <Helmet title='Checkout'>
@@ -25,61 +37,25 @@ const Checkout = () => {
             <section>
                 <Container>
                     <Row>
-                        {/* <Col lg='8'>
-                            <h6 className='mb-4 fw-bold'>Billing Information</h6>
-                            <Form className='billing_forms'>
-                                <FormGroup className="form_group">
-                                    <input type="text" placeholder='Enter Your Name' 
-                                    value={name}
-                                    required
-                                    onChange={(e)=>setName(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="email" placeholder='Enter Your Email' 
-                                    value={email}
-                                    required
-                                    onChange={(e)=>setEmail(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="number" placeholder='Phone Number' 
-                                    value={phone}
-                                    required
-                                    onChange={(e)=>setPhone(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="text" placeholder='Street Address' 
-                                    value={address}
-                                    required
-                                    onChange={(e)=>setAddress(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="text" placeholder='City' 
-                                    value={city}
-                                    required
-                                    onChange={(e)=>setCity(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="number" placeholder='Postal Code' 
-                                    value={postalCode}
-                                    required
-                                    onChange={(e)=>setPostalCode(e.target.value)}
-                                    />
-                                </FormGroup>
-                                <FormGroup className="form_group">
-                                    <input type="text" placeholder='Country' 
-                                    value={country}
-                                    required
-                                    onChange={(e)=>setCountry(e.target.value)}
-                                    />
-                                </FormGroup>
-                              </Form>
-                        </Col> */}
-                        <Col lg='12'>
+                        <Col lg='8'>
+                        <div className='billing_form'>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <label>Your Name*</label>
+                            <input placeholder='Name' type="text" name="user_name" required />
+                            <label>Street Address*</label>
+                            <input placeholder='Street Address' type="text" name="user_address" required />
+                            <label>Phone Number*</label>
+                            <input placeholder='Phone Number' type="number" name="user_phone" required />
+                            <label>Country*</label>
+                            <input placeholder='Country' type='text' name="user_country" required />
+                            <label>City*</label>
+                            <input placeholder='City' type='text' name="user_city" required />
+                            <br />
+                            <input className='submit-button' type="submit" value="Send" />
+                        </form>
+                        </div>
+                        </Col>
+                        <Col lg='4'>
                         <div className="checkout_cart">
                             <h6>Total Qty: <span>{totalQty} Items</span></h6>
                             <h6>Subtotal: <span>{totalAmount}</span></h6>

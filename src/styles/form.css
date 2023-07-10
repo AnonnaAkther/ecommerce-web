@@ -1,0 +1,17 @@
+.formInput{
+    display: grid;
+    grid-gap: 5px;
+    width: 400px;
+    align-items: center;
+}
+input{
+    gap: 5%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 15px;
+}
+label{
+    font-size: 15px;
+    color: gray;
+}

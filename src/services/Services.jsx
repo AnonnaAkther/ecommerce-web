@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 
 const Services = () => {
     return <section className="services">
+        <h1 className='text-success text-center mb-5'>Place an order on the website, and the product 
+       <br /> will be delivered to your home!</h1>
         <Container>
             <Row>
                 {

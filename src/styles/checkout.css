@@ -1,5 +1,18 @@
-.billing_form .form_group input{
-    border: 1px solid var(--card-bg-02);
+input{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+label{
+    font-size: 15px;
+    color: gray;
+}
+.submit-button{
+    background-color: var(--primary-color);
+    color: white;
 }
 .checkout_cart{
     padding: 20px;

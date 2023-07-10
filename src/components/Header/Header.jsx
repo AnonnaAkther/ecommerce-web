@@ -3,7 +3,7 @@ import { Container, Row } from 'reactstrap';
 import './header.css';
 import logo from '../../assets/images/eco-logo.png';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import userIcon from '../../assets/images/user-icon.png';
+// import userIcon from '../../assets/images/user.png';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -25,6 +25,10 @@ const nav_links = [
     {
         path:'cart',
         display:'Cart'
+    },
+    {
+        path:'login',
+        display:'Login'
     },
 ]
 
@@ -105,7 +109,7 @@ const Header = () => {
                             <i className="ri-shopping-bag-line"></i>
                             <span id="badge">{totalQuantity}</span>
                         </span>
-                        <div className='profile'>
+                        {/* <div className='profile'>
                             <motion.img whileTap={{scale:1.2}}
                             src={userIcon} 
                             alt="" 
@@ -124,7 +128,7 @@ const Header = () => {
                                 </div>)
                             }
                            </div>
-                        </div>
+                        </div> */}
                     <div className="mobile_menu">
                         <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>

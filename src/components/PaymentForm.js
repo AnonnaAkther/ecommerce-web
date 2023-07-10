@@ -47,7 +47,7 @@ export default function PaymentForm() {
                 setSuccess(true)
             }
         } catch (error) {
-            console.log("Error", error);
+            toast.error("please try again!", error);
         }
     }
     else{
